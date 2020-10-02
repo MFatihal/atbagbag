@@ -12,10 +12,11 @@
 <header class="header-area">
 	<?php $this->load->view('templates/header'); ?>
 </header>
+<br><br><br><br><br><br>
 <div class="container">
 	<div class="row">
 		<div class="col-sm-4 col-sm-offset-1">
-			<h2>Upload bukti pembayaran</h2><br>
+			<h4>Upload bukti pembayaran</h4><br>
 			<form action="<?php echo base_url('Bukti/upload_image'); ?>" id="main-contact-form" class="contact-form row" name="contact-form" method="post" enctype="multipart/form-data">
 				<div class="form-group col-md-12">
 					<input type="text" name="kode_pesan" class="form-control" required="required" placeholder="#Kode pesan">
@@ -39,7 +40,7 @@
 				<?php } ?> -->
 		</div>
 		<div class="col-sm-6">
-			<h2 style="text-align: right;color: #FE980F;">Apa itu bukti pembayaran??</h2>
+			
 			<p style="background-color: #F2F8F9;margin: 30px;padding: 5px;padding-left: 10px;">
 				Bukti pembayaran merupakan bukti transfer bank transaksi pemesanan yang anda lakukan, caranya :<br><br>
 				1. Masukkan kode pesan transaksi anda,<br>

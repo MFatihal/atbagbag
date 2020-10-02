@@ -59,7 +59,7 @@
                     <div class="float-right">
                       <p class="mb-0 text-right">Users</p>
                       <div class="fluid-container">
-                        <h3 class="font-weight-medium text-right mb-0"></h3>
+                        <h3 class="font-weight-medium text-right mb-0"><?php echo $user; ?></h3>
                       </div>
                     </div>
                   </div>
@@ -72,7 +72,7 @@
           </div>
 
 
-          <div class="row">
+        <div class="row">
             <div class="col-lg-12 grid-margin">
               <div class="card">
                 <div class="card-body">
@@ -133,7 +133,7 @@
                               ?>
                           </td>
                           <td>
-                            <form target="_blank" action="<?php echo base_url('Owner_controller/Beranda/detail_transaksi/'.$a->id_kirim); ?>" method="post">
+                            <form target="_blank" action="<?php echo base_url('Admin_controller/Beranda/detail_transaksi/'.$a->id_kirim); ?>" method="post">
                                 <input type="hidden" name="idpesan" value="<?php echo $a->id_pesan;?>">
                                 <input type="hidden" name="harga_kirim" value="<?php echo $a->harga_kirim;?>">
                                 <input type="hidden" name="total_pesan" value="<?php echo $a->total_pesan;?>">
@@ -142,7 +142,7 @@
                                 <input type="hidden" name="status" value="<?php echo $a->status; ?>">
                                 <button type="submit" class="btn btn-primary">Lihat detail transaksi</button>
                             </form><br>
-                            <a class="btn btn-primary btn-block" target="_blank" href="<?php echo base_url('Owner_controller/Beranda/datapengiriman/'.$a->id_kirim); ?>">Lihat data pengiriman</a>
+                            <a class="btn btn-primary btn-block" target="_blank" href="<?php echo base_url('Admin_controller/Beranda/datapengiriman/'.$a->id_kirim); ?>">Lihat data pengiriman</a>
                             <br>
                             <?php echo '<a target="_blank" class="btn btn-primary btn-block" href="https://api.whatsapp.com/send?phone='.$a->telp.'&text=SAUDARA%20'.$a->nama_pengirim.'%20dengan%20TOTAL%20PESANAN%20'.$format_indonesia = number_format ($a->total_pesan, 0, ',', '.').'%20dikirim%20ke%20alamat%20DESA%20'.$a->desa.'%20KECAMATAN%20'.$a->kecamatan.'%20KABUPATEN%20'.$a->kabupaten.'%20PROVINSI%20'.$a->provinsi.'">Beri Kabar barang dikirim</a>'; ?>
                     
@@ -156,6 +156,7 @@
               </div>
             </div>
           </div>
+
 
          
         </div>

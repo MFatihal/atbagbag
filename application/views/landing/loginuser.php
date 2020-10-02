@@ -53,11 +53,6 @@
 					</div><!--/sign up form-->
 				</div>
 				<!-- button login admin -->
-				<div class="col-md-5">
-					<form method="post" action="<?php echo base_url('Owner_controller/A_login'); ?>">
-						<button type="submit" class="btn btn-sm btn-success">Login Admin</button>
-					</form>
-				</div>
 			</div>
 		</div><br><br>
 		

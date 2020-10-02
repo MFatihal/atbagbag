@@ -13,28 +13,21 @@
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul id="nav" class="navbar-nav ml-auto" >
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                     <a data-scroll-nav="0" ><i class="fas fa-shopping-cart"> Keranjang : &nbsp;
                                         <?php $keranjang = $this->cart->total_items()  ?>
                                         <?php echo anchor('Landing/detail_keranjang', $keranjang)  ?>
                                 </i></a>
                                 </li> 
-                                <li class="nav-item active">
+                                <li class="nav-item">
                                     <a data-scroll-nav="0" href="<?php echo base_url('Landing'); ?>">Beranda</a>
                                 </li>
-                                <li class="nav-item">
-                                    <div class="dropdown" >
-                                        <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Produk</a>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                <a class="dropdown-item" href="#sportbra">Sport Bra</a>
-                                                <a class="dropdown-item" href="#tas">Tas</a>
-                                                <a class="dropdown-item" href="#pernik">Pernak Pernik</a>
-                                            </div>
-                                    </div>
-                                </li>
 
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
+                                    <a data-scroll-nav="0" href="<?php echo base_url('Landing_controller/Login/logout'); ?>">Logout</a>
+                                </li> -->
+
+                                <!-- <li class="nav-item">
                                     <div class="dropdown" >
                                         <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Login</a>
@@ -43,7 +36,7 @@
                                                 <a class="dropdown-item" href="<?php echo base_url('Landing_controller/Login/logout'); ?>">Logout</a>
                                             </div>
                                     </div>
-                                </li>
+                                </li> -->
                                         
                                 <!-- <li class="nav-item">
                                     <a data-scroll-nav="0" href="<?php echo base_url('Landing_controller/Login'); ?>">Login</a>

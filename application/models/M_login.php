@@ -11,6 +11,10 @@ class M_login extends CI_Model{
 		$query = $this->db->query("SELECT * FROM user WHERE email='$username'");
 		return $query->result();
 	}
+	function idkostumer($kostumer){
+		$query = $this->db->query("SELECT * FROM kostumer WHERE email='$kostumer'");
+		return $query->result();
+	}
 	function get_iduser(){
           $this->db->select('RIGHT(user.id_user,4) as kode', FALSE);
 		  $this->db->order_by('id_user','DESC');    

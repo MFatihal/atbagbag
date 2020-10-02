@@ -4,7 +4,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Login extends CI_Controller{
     function __construct(){
         parent::__construct();
+        $this->load->model('M_login');
         $this->load->library('form_validation');
+        // $this->load->helper(array('url'));
+        // if($this->session->userdata('kostumer') == "111"){
+		// 	redirect('Landing','refresh');
+		// }else if ($this->session->userdata('owner') == "333") {
+		// 	redirect('Owner_controller/Beranda','refresh');
+		// }
     }
     public function index() {
 
@@ -60,6 +67,31 @@ class Login extends CI_Controller{
         $kostumer = $this->db->get_where('kostumer', ['email' => $email])->row_array();
 
         // cek user
+
+        // foreach($this->M_login->idkostumer($kostumer) as $row){
+		// 	$iduser=$row->id_kostumer;
+		// 	$namauser = $row->nama_kostumer;
+		// 	$level = $row->id_level_id;
+		// }
+		// $where = array(
+		// 	'email' => $kostumer,
+		// 	'password' => $password,
+		// 	'level_id_level' => 111
+        //     );
+        // $cek = $this->M_login->cek_login("kostumer",$where)->num_rows();
+
+        // if($cek > 0){
+		// 	$data_session = array(
+		// 		'emailkostumer' => $kostumer,
+		// 		'iduser' => $iduser,
+		// 		'namakostumer' => $namauser,
+		// 		'kostumer' => $level,
+		// 		);
+ 
+		// 	$this->session->set_userdata($data_session);
+ 
+        //     redirect('Landing');
+        // }
         if($kostumer) {
 
 
@@ -72,7 +104,7 @@ class Login extends CI_Controller{
                 if($kostumer['id_level_id'] == 111) {
                      redirect('Landing');
                 } else {
-                    redirect('Owner_controller/Beranda');
+                    redirect('Landing_controller/Login');
                 }
                 
             } else {
@@ -98,10 +130,6 @@ class Login extends CI_Controller{
                 window.location.href = '".base_url('Landing_controller/Login')."';
             </script>";//Url tujuan
 
-    }
-
-    public function beranda() {
-        $this->load->view('Owner_view/VO_beranda');
     }
 
 }

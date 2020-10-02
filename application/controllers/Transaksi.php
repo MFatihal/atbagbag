@@ -29,7 +29,7 @@ class Transaksi extends CI_Controller {
 		$data['idpesan'] =$this->input->post('idpesan');
 		$idpesan2 =$this->input->post('idpesan');
 		$data['inv'] = $this->M_transaksi->invoice($idpesan2,$iduser);
-		$data['inv2'] = $this->M_transaksi->tampil_pengiriman($idkirim);
+		$data['inv2'] = $this->M_transaksi->tampil_pesan($idkirim);
 		$data['pengiriman'] = $this->input->post('harga_kirim');
 		$data['total2'] = $this->input->post('total_pesan');
 		$this->load->view('V_invoice',$data);

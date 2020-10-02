@@ -55,7 +55,6 @@
                                     <div class="slider-product-content">
                                         <h1 class="slider-title mb-10" data-animation="fadeInUp" data-delay="0.3s"><span>Dapatkan</span> Segera <span>!!</span></h1>
                                         <p class="mb-25" data-animation="fadeInUp" data-delay="0.9s">Setiap pembelian sport bra khusus minggu ini, dapatkan free panty,<br> tanpa minimal pembelian. </p>
-                                        <a class="main-btn" href="#belanjasportbra">Beli Sekarang<i class="lni-chevron-right"></i></a>
                                         
                                     </div> <!-- slider product content -->
                                 </div>

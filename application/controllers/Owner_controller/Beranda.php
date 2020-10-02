@@ -18,7 +18,7 @@ class Beranda extends CI_Controller{
 	public function index(){
 		$data['total'] = $this->MO_transaksi->totalPemasukan();
 		$data['order'] = $this->db->query("SELECT * FROM pesan")->num_rows();
-		// $data['user'] = $this->db->query("SELECT * FROM kostumer WHERE level_id_level='111'")->num_rows();
+		$data['user'] = $this->db->query("SELECT * FROM kostumer WHERE id_level_id='111'")->num_rows();
 		$data['pesan'] = $this->MO_transaksi->tampil_pesan();
 		$this->load->view('element/Owner/Header_owner',$data);
 		$this->load->view('Owner_view/VO_beranda',$data);

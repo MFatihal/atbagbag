@@ -31,7 +31,7 @@
                                     <div class="single-footer-info mt-20">
                                         <span>Telepon :</span>
                                         <div class="footer-info-content">
-                                            <p>(0331) 330900</p>
+                                            <p>085233161119(WA/CALL)</p>
                                             
                                         </div>
                                     </div> <!-- single footer info -->
@@ -49,7 +49,7 @@
                                     <div class="single-footer-info mt-20">
                                         <span>Alamat :</span>
                                         <div class="footer-info-content">
-                                            <p>Jl. S.Parman No.42 Jember</p>
+                                            <p>Jl. Cokroaminoto Gg. Panili Blok 5, Talangsari Jember</p>
                                         </div>
                                     </div> <!-- single footer info -->
                                 </li>

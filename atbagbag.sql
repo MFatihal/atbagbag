@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 30, 2020 at 01:35 PM
+-- Generation Time: Feb 03, 2020 at 03:36 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -59,10 +59,9 @@ CREATE TABLE `kategori` (
 --
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`) VALUES
-('KG0001', 'BRA'),
+('KG0001', 'Bra'),
 ('KG0002', 'Tas'),
-('KG0003', 'CD'),
-('KG0004', 'Korset');
+('KG0003', 'Pernak Pernik');
 
 -- --------------------------------------------------------
 
@@ -83,8 +82,8 @@ CREATE TABLE `keranjang` (
 --
 
 INSERT INTO `keranjang` (`jumlah`, `total`, `id_kostumer_id`, `produk_id_produk`, `pesan_id_pesan`) VALUES
-('2', '2000000', NULL, 'PR0004', 'PS0034'),
-('2', '2000000', NULL, 'PR0004', 'PS0035');
+('1', '39800', NULL, 'PR0013', 'PS0039'),
+('1', '16000', NULL, 'PR0023', 'PS0039');
 
 --
 -- Triggers `keranjang`
@@ -118,7 +117,8 @@ CREATE TABLE `kostumer` (
 --
 
 INSERT INTO `kostumer` (`id_kostumer`, `nama_kostumer`, `email`, `no_telp`, `password`, `date_created`, `id_level_id`) VALUES
-(3, 'farid', 'farid@gmail.com', 568290093, '$2y$10$IZk0IIYOEvQHH9yQWpVf4uwWImT1Xe.nw9WYNAjkgmY.xZ9oNlD1i', 1580305647, '111');
+(3, 'farid', 'farid@gmail.com', 568290093, '$2y$10$IZk0IIYOEvQHH9yQWpVf4uwWImT1Xe.nw9WYNAjkgmY.xZ9oNlD1i', 1580305647, '111'),
+(4, 'mega', 'megasilvia5555@gmail.com', 2147483647, '$2y$10$9iH.3Ic.OkDD.MWjKXjmkOzkZ4kqc9kTgOv0.Q6dUe95okz5RdMJi', 1580401824, '111');
 
 -- --------------------------------------------------------
 
@@ -219,7 +219,10 @@ INSERT INTO `pengiriman` (`id_kirim`, `nama_pengirim`, `provinsi`, `kabupaten`, 
 ('S00062', 'farid', 'Gorontalo', 'Gorontalo', 'gorontalo', 'gorontalo', 'ECO', 'tiki', 88000, 758595, '089986876930'),
 ('S00063', 'farid', 'Gorontalo', 'Gorontalo', 'gorontalo', 'gorontalo', 'ECO', 'tiki', 88000, 758595, '089986876930'),
 ('S00064', 'farid', 'Gorontalo', 'Gorontalo', 'gorontalo', 'gorontalo', 'ECO', 'tiki', 88000, 758595, '089986876930'),
-('S00065', 'farid', 'Jawa Timur', 'Nganjuk', 'kertosono', 'banaran', 'REG', 'tiki', 8000, 980099, '080036482827');
+('S00065', 'farid', 'Jawa Timur', 'Nganjuk', 'kertosono', 'banaran', 'REG', 'tiki', 8000, 980099, '080036482827'),
+('S00066', 'mm', 'Jawa Tengah', 'Banjarnegara', 'dd', 'dd', 'REG', 'jne', 19000, 44, '44'),
+('S00067', 'rr', 'Jawa Barat', 'Bandung', 'rr', 'tt', 'Express Next Day Barang', 'pos', 46000, 55, '55'),
+('S00068', 'mega', 'Kalimantan Utara', 'Bulungan (Bulongan)', 'ss', 'ss', 'Paket Kilat Khusus', 'pos', 54000, 11, '11');
 
 -- --------------------------------------------------------
 
@@ -243,7 +246,9 @@ CREATE TABLE `pesan` (
 
 INSERT INTO `pesan` (`id_pesan`, `id_kostumer_id`, `tanggal_pesan`, `jatuh_tempo`, `status`, `pengiriman_id_kirim`, `total_pesan`) VALUES
 ('PS0034', 0, '2020-01-29 22:54:48', '2020-01-30 03:54:48', 'Proses', 'S00064', 2088000),
-('PS0035', 0, '2020-01-30 18:52:12', '2020-01-30 23:52:13', 'Proses', 'S00065', 2008000);
+('PS0035', 0, '2020-01-30 18:52:12', '2020-01-30 23:52:13', 'Proses', 'S00065', 2008000),
+('PS0038', 0, '2020-01-30 23:32:34', '2020-01-31 04:32:34', 'Proses', 'S00066', 61900),
+('PS0039', 0, '2020-02-01 12:20:17', '2020-02-01 17:20:17', 'Proses', 'S00068', 109800);
 
 -- --------------------------------------------------------
 
@@ -266,10 +271,24 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id_produk`, `nama_produk`, `keterangan`, `kategori_id_kategori`, `stok`, `harga`, `gambar`) VALUES
-('PR0002', 'Clara Instant', 'Hijab Nyaman dipakai', 'KG0001', 86, 20000, 'assets/images/Clara_Istant9.jpg'),
-('PR0004', 'sandal', 'sandal kesehatan', 'KG0001', 977, 1000000, 'assets/images/sandal.jpg'),
-('PR0005', 'swallow', 'mereknya', 'KG0001', 8, 999999999, 'assets/images/sandal1.jpg'),
-('PR0006', 'asasas', 'asasas', 'KG0002', 3, 50000, 'assets/images/aji.jpg');
+('PR0006', 'Bra 1pcs', 'Bra 1pcs', 'KG0001', 190, 219000, 'assets/images/1pcs2.jpg'),
+('PR0007', 'Bra 2pcs', 'Bra 2pcs', 'KG0001', 200, 398000, 'assets/images/2pcs2.jpg'),
+('PR0008', 'Bra 3pcs', 'Bra 3pcs', 'KG0001', 590, 498000, 'assets/images/3pcs2.jpg'),
+('PR0009', '1 set (bra + panty)', '1 set (bra + panty)', 'KG0001', 780, 289000, 'assets/images/1set2.jpg'),
+('PR0010', '2 set (bra + panty)', '2 set (bra + panty)', 'KG0001', 690, 449000, 'assets/images/2set2.jpg'),
+('PR0011', '3 set (bra + panty)', '3 set (bra + panty)', 'KG0001', 456, 559000, 'assets/images/3set2.jpg'),
+('PR0012', 'Tas Selempang Waioder Homme', 'bahan import', 'KG0002', 760, 28900, 'assets/images/0813.jpg'),
+('PR0013', 'Tas Lacoste Mono premium', 'bahan import', 'KG0002', 656, 39800, 'assets/images/tas411.jpg'),
+('PR0014', 'LOVA MILA - tas wanita', 'bahan import', 'KG0002', 543, 54000, 'assets/images/tas52.jpg'),
+('PR0015', 'IMPORT CP 233 Tas Wanita', 'bahan import', 'KG0002', 343, 65000, 'assets/images/tas111.jpg'),
+('PR0016', 'tas fashion wanita mv_marvelouz', 'bahan import', 'KG0002', 333, 42000, 'assets/images/tas61.jpg'),
+('PR0017', 'IMPORT TR 970 Tas Wanita', 'bahan import', 'KG0002', 211, 45900, 'assets/images/tas102.jpg'),
+('PR0018', 'Eco Lunch Box', 'harga termurah', 'KG0003', 345, 59000, 'assets/images/pernik62.jpg'),
+('PR0019', 'Toples Bunga', 'harga termurah', 'KG0003', 333, 45900, 'assets/images/pernik42.jpg'),
+('PR0020', 'Panino Lunch Box', 'harga termurah', 'KG0003', 455, 42900, 'assets/images/pernik511.jpg'),
+('PR0021', 'Bunny Mirror', 'harga termurah', 'KG0003', 330, 21900, 'assets/images/pernik102.jpg'),
+('PR0022', 'Tootbrush character', 'harga termurah', 'KG0003', 655, 19000, 'assets/images/pernik92.jpg'),
+('PR0023', 'Mirror LED pig', 'harga termurah', 'KG0003', 221, 16000, 'assets/images/pernik82.jpg');
 
 -- --------------------------------------------------------
 
@@ -371,7 +390,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `kostumer`
 --
 ALTER TABLE `kostumer`
-  MODIFY `id_kostumer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_kostumer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables

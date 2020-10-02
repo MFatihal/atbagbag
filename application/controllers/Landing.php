@@ -9,6 +9,12 @@ class Landing extends CI_Controller{
 		$this->load->library('upload');
 		$this->load->helper(array('url'));
 		
+		// if($this->session->userdata('kostumer') != "111"){
+		// 	echo "<script>
+        //         alert('Anda harus login terlebih dahulu');
+        //         window.location.href = '".base_url('Landing_controller/Login')."';
+        //     </script>";//Url tujuan
+		// }
 	}
 
 
